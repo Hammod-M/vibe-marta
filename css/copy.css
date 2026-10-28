@@ -1,0 +1,18 @@
+/* Behaviour that the original page sets from React/framer-motion at runtime */
+.LandingHeader-module-scss-module__98Jocq__burgerMenu[hidden] {
+  display: none !important;
+}
+.Faq-module-scss-module___kfcqq__faqList > li {
+  border-color: rgba(0, 0, 0, 0) !important;
+  border-radius: 12px;
+  transition: border-color 0.35s;
+  cursor: pointer;
+}
+.Faq-module-scss-module___kfcqq__faqList > li.is-open {
+  border-color: var(--black) !important;
+}
+.FaqItem-module-scss-module__qeCKOa__answer {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.35s ease-out;
+}
