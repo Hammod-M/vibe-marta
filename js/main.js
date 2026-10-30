@@ -54,6 +54,30 @@
     });
   });
 
+  // --- "Личный кабинет" popup -------------------------------------------------
+  var lkPopup = document.getElementById('lk-popup');
+  var lkBox = lkPopup.firstElementChild;
+
+  function setLkPopup(open) {
+    lkPopup.hidden = !open;
+    document.body.style.overflow = open ? 'hidden' : '';
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+  }
+
+  document.querySelectorAll('[data-lk-popup]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      setLkPopup(true);
+    });
+  });
+  lkPopup.querySelector('button').addEventListener('click', function () { setLkPopup(false); });
+  lkPopup.addEventListener('mousedown', function (e) {
+    if (!lkBox.contains(e.target)) setLkPopup(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !lkPopup.hidden) setLkPopup(false);
+  });
+
   // --- Reward cards ---------------------------------------------------------
   var plusIcon =
     '<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19.5" stroke="#252526"></circle>' +

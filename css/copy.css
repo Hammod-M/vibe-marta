@@ -2,6 +2,17 @@
 .LandingHeader-module-scss-module__98Jocq__burgerMenu[hidden] {
   display: none !important;
 }
+#lk-popup[hidden] {
+  display: none;
+}
+.lk-popup-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.lk-popup-buttons a {
+  flex: 1;
+}
 .Faq-module-scss-module___kfcqq__faqList > li {
   border-color: rgba(0, 0, 0, 0) !important;
   border-radius: 12px;
