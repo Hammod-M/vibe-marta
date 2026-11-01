@@ -27,3 +27,38 @@
   height: 0;
   transition: height 0.35s ease-out;
 }
+
+/* Store button on the first screen, under the registration button.
+   Styled like the "Присоединиться к VIBE" button (outlined, green arrow). */
+.hero-store-btn {
+  border: 1px solid var(--black);
+  gap: 10px;
+  width: 220px;
+  height: 46px;
+  background: transparent !important;
+  color: var(--black);
+  margin-top: 12px;
+  margin-bottom: 70px;
+  padding-left: 24px;
+  padding-right: 8px;
+}
+.hero-store-btn svg {
+  stroke: #252526;
+}
+.hero-store-btn:hover {
+  background: var(--black) !important;
+  color: #fff !important;
+}
+.hero-store-btn:hover svg {
+  fill: #fff;
+  stroke: #fff;
+}
+/* Remove the registration button's bottom gap so the store button sits right under it */
+.Hero-module-scss-module__gmAvZG__btn:has(+ .hero-store-btn) {
+  margin-bottom: 0;
+}
+@media (max-width: 520px) {
+  .hero-store-btn {
+    width: 100%;
+  }
+}
