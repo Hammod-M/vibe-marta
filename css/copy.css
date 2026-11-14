@@ -62,3 +62,20 @@
     width: 100%;
   }
 }
+
+/* Highlight the catalog action in the first screen banner. */
+.hero-store-btn {
+  background: #b8e05f !important;
+  border-color: #b8e05f !important;
+  color: #252526 !important;
+  font-weight: 600;
+}
+.hero-store-btn:hover {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #252526 !important;
+}
+.hero-store-btn:hover svg {
+  fill: #252526;
+  stroke: #252526;
+}
